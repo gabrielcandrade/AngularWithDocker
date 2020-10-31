@@ -1,0 +1,29 @@
+<p-table [value]="worlds">
+    <ng-template pTemplate="caption">
+        <div class="p-d-flex p-ai-center p-jc-between" style="font-size: 36pt;">
+            Mundos
+            <button pButton pRipple type="button" icon="pi pi-refresh" class="p-button-rounded p-button-outlined"></button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>População</th>
+            <th>Nota</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-world>
+        <tr>
+            <td>{{world.id}}</td>
+            <td>{{world.name}}</td>
+            <td>{{world.population}}</td>
+            <td><p-rating [ngModel]="world.globalRating" [readonly]="true" [cancel]="false"></p-rating></td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <div class="p-d-flex p-ai-center p-jc-between">
+            Listados acima um total de {{worlds ? worlds.length : 0 }} mundo.
+        </div>
+    </ng-template>
+</p-table>

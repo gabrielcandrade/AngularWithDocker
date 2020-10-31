@@ -1,0 +1,28 @@
+<h3>Cadastro de Usuários</h3>
+<div class="ui-fluid p-formgrid p-grid">
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText> 
+        <label for="float-input">Usuário</label>
+    </span>
+    <span class="p-float-label">
+        <input id="float-input" type="email" pInputText> 
+        <label for="float-input">Email</label>
+    </span>
+    <span class="p-float-label">
+        <input type="password" pPassword [(ngModel)]="property"/>
+        <label for="float-input">Senha</label>
+    </span>
+    <span class="p-float-label">
+        <input type="password" pPassword [(ngModel)]="property"/>
+        <label for="float-input">Confirmação da Senha</label>
+    </span>
+    <h5>Data de Nascimento</h5>
+    <p-calendar [(ngModel)]="value" [inline]="true"></p-calendar>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <button pButton pRipple type="button" label="Salvar" class="p-button-secondary"></button>
+    <button pButton pRipple type="button" label="Enviar"></button>
+</div>

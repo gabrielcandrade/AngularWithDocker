@@ -1,0 +1,28 @@
+{
+	"data": [
+		{
+			"id": "122236548",
+			"nickname": "Krythor",
+			"race": "Dark Elf",
+			"class": "Wizard",
+			"element": "Fire",
+			"origin": "Jotunheim"
+        },
+        {
+			"id": "122236549",
+			"nickname": "Mysthighan",
+			"race": "Demigod",
+			"class": "Bruiser",
+			"element": "Aether",
+			"origin": "Asgard"            
+        },
+        {
+			"id": "122236550",
+			"nickname": "Cleitin",
+			"race": "Dwarf",
+			"class": "Archer",
+			"element": "Wind",
+			"origin": "Midgard"
+        }
+	]
+}

@@ -1,0 +1,33 @@
+<p-table [value]="skills">
+    <ng-template pTemplate="caption">
+        <div class="p-d-flex p-ai-center p-jc-between" style="font-size: 36pt;">
+            Poderes
+            <button pButton pRipple type="button" icon="pi pi-refresh" class="p-button-rounded p-button-outlined"></button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Vinculado a</th>
+            <th>Elemento</th>
+            <th>Poder</th>
+            <th>Em área?</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-skill>
+        <tr>
+            <td>{{skill.id}}</td>
+            <td>{{skill.name}}</td>
+            <td>{{skill.character}}</td>
+            <td>{{skill.element}}</td>
+            <td>{{skill.poder}}</td>
+            <td>{{skill.aoe}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <div class="p-d-flex p-ai-center p-jc-between">
+            Listados acima um total de {{skills ? skills.length : 0 }} magias.
+        </div>
+    </ng-template>
+</p-table>

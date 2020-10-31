@@ -1,0 +1,61 @@
+<div class="p-d-flex p-ai-center p-jc-between" style="font-weight: 500; padding: 1rem; font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif; font-size: 36pt; color: #dbdbdb;">
+    Cadastro de poderes
+</div>
+<div class="p-fluid p-grid">
+    <div class="p-field p-col-12 p-md-4">
+        <span class="p-float-label">
+            <input type="text" id="id" pInputText [(ngModel)]="id"> 
+            <label for="inputtext">Id</label>
+        </span>
+    </div>
+</div>
+
+<div class="p-fluid p-grid">
+    <div class="p-field p-col-12 p-md-4">
+        <span class="p-float-label">
+            <input type="text" id="name" pInputText [(ngModel)]="name"> 
+            <label for="inputtext">Name</label>
+        </span>
+    </div>
+</div>
+
+<div class="p-fluid p-grid">
+    <div class="p-field p-col-12 p-md-4">
+        <span class="p-float-label">
+            <input type="text" id="character" pInputText [(ngModel)]="character"> 
+            <label for="inputtext">Personagem</label>
+        </span>
+    </div>
+</div>
+
+<div class="p-fluid p-grid">
+    <div class="p-field p-col-12 p-md-4">
+        <span class="p-float-label">
+            <input type="text" id="element" pInputText [(ngModel)]="element"> 
+            <label for="inputtext">Elemento</label>
+        </span>
+    </div>
+</div>
+
+<div class="p-fluid p-grid">
+    <div class="p-field p-col-12 p-md-4">
+        <span class="p-float-label">
+            <input type="number" id="poder" pInputText [(ngModel)]="poder"> 
+            <label for="inputtext">Poder</label>
+        </span>
+    </div>
+</div>
+
+<div class="p-fluid p-grid">
+    <div class="p-field p-col-12 p-md-4">
+        <span class="p-float-label">
+            <p style="color:white;">AoE</p>
+            <p-inputSwitch [(ngModel)]="aoe"></p-inputSwitch>
+        </span>
+    </div>
+</div>
+
+<br><br>
+<button pButton pRipple type="button" label="Cancelar" class="p-button-danger"></button>
+
+<button pButton pRipple type="button" label="Salvar" class="p-button-success"></button>

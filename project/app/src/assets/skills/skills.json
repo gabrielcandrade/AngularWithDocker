@@ -1,0 +1,28 @@
+{
+	"data": [
+		{
+			"id": "122236900",
+			"name": "Fireball",
+			"character": "Krythor",
+			"element": "Fire",
+			"poder": 100,
+			"aoe": false
+        },
+        {
+			"id": "12223901",
+			"name": "Gáe Bolg",
+			"character": "Mysthighan",
+			"element": "Blood",
+			"poder": 120,
+			"aoe": false
+        },
+        {
+			"id": "122236902",
+			"name": "Breeze Shot",
+			"character": "Cleitin",
+			"element": "Wind",
+			"poder": 90,
+			"aoe": false
+        }
+	]
+}

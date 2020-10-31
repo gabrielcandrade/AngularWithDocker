@@ -1,0 +1,60 @@
+{
+	"data": [
+		{
+			"id": "1000F540",
+			"name": "Midgard",
+			"population": 12236548,
+			"globalRating": 4,
+			"waterRating": 4,
+			"diamondRating": 4,
+			"goldRating": 4,
+			"silverRating": 4,
+			"cooperRating": 5
+		},
+		{
+			"id": "1587F554",
+			"name": "Asgard",
+			"population": 301312,
+			"globalRating": 5,
+			"waterRating": 5,
+			"diamondRating": 5,
+			"goldRating": 5,
+			"silverRating": 5,
+			"cooperRating": 5
+		},
+		{
+			"id": "1000F541",
+			"name": "Jotunheim",
+			"population": 62359,
+			"globalRating": 1,
+			"waterRating": 2,
+			"diamondRating": 0,
+			"goldRating": 0,
+			"silverRating": 1,
+			"cooperRating": 1
+		},
+		{
+			"id": "1000F542",
+			"name": "Nilfheim",
+			"population": 1152548,
+			"globalRating": 3,
+			"waterRating": 4,
+			"diamondRating": 4,  
+			"goldRating": 3,
+			"silverRating": 5,
+			"cooperRating": 5
+		},
+		{
+			"id": "1000F543",
+			"name": "Dark Realm",
+			"population": 666666,
+			"globalRating": 0,
+			"waterRating": 0,
+			"diamondRating": 0,
+			"goldRating": 1,
+			"silverRating": 1,
+			"cooperRating": 1
+		}
+
+	]
+}

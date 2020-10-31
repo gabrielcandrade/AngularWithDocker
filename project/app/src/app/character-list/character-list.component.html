@@ -1,0 +1,33 @@
+<p-table [value]="characters">
+    <ng-template pTemplate="caption">
+        <div class="p-d-flex p-ai-center p-jc-between" style="font-size: 36pt;">
+            Personagens
+            <button pButton pRipple type="button" icon="pi pi-refresh" class="p-button-rounded p-button-outlined"></button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Id</th>
+            <th>Nickname</th>
+            <th>Raça</th>
+            <th>Classe</th>
+            <th>Elemento</th>
+            <th>Origem</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-character>
+        <tr>
+            <td>{{character.id}}</td>
+            <td>{{character.nickname}}</td>
+            <td>{{character.race}}</td>
+            <td>{{character.class}}</td>
+            <td>{{character.element}}</td>
+            <td>{{character.origin}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <div class="p-d-flex p-ai-center p-jc-between">
+            Listados acima um total de {{characters ? characters.length : 0 }} personagens.
+        </div>
+    </ng-template>
+</p-table>
