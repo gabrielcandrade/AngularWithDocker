@@ -43,3 +43,9 @@ Em casos de BUGS, deve acessar o container, e rodar os scripts:
 - [Cadastrar novo personagem](http://localhost:4200/character-new)
 - [Lista de Poderes](http://localhost:4200/skills-list)
 - [Cadastrar novo poder](http://localhost:4200/skills-new)
+
+## Rotas API
+
+- [Character](http://localhost:8005/api/character/)
+- [Skill](http://localhost:8005/api/skill/)
+- [World](http://localhost:8005/api/world/)
