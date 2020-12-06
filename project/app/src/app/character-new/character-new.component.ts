@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CharacterService } from '../character-list/characterservice';
 
 @Component({
   selector: 'app-character-new',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterNewComponent implements OnInit {
 
-  constructor() { }
+  public character
+  constructor(private characterService:CharacterService) { }
 
   ngOnInit() {
+  }
+
+  public salvar(){
+    this.characterService.salvar(this.character).subscribe(
+      response => {
+        alert("Salvo com sucesso!")
+      },
+      error => {
+        alert(this.character)
+      }
+    )
   }
 
 }

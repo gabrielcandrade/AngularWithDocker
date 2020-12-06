@@ -1,19 +1,19 @@
 <div class="p-d-flex p-ai-center p-jc-between" style="font-weight: 500; padding: 1rem; font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif; font-size: 36pt; color: #dbdbdb;">
     Cadastro de mundos
 </div>
-<div class="p-fluid p-grid">
+<!-- <div class="p-fluid p-grid">
     <div class="p-field p-col-12 p-md-4">
         <span class="p-float-label">
-            <input type="text" id="id" pInputText [(ngModel)]="id"> 
+            <input type="text" id="id" pInputText [(ngModel)]="world.id"> 
             <label for="inputtext">Id</label>
         </span>
     </div>
-</div>
+</div> -->
 
 <div class="p-fluid p-grid">
     <div class="p-field p-col-12 p-md-4">
         <span class="p-float-label">
-            <input type="text" id="name" pInputText [(ngModel)]="name"> 
+            <input type="text" pInputText [(ngModel)]="name"> 
             <label for="inputtext">Nome</label>
         </span>
     </div>
@@ -31,7 +31,7 @@
 <div class="p-fluid p-grid">
     <div class="p-field p-col-12 p-md-4">
         <span class="p-float-label">
-            <input type="number" id="globalRating" pInputText [(ngModel)]="globalRating"> 
+            <input type="number" id="global_rating" pInputText [(ngModel)]="global_rating"> 
             <label for="inputtext">Nota do mundo</label>
         </span>
     </div>
@@ -40,7 +40,7 @@
 <div class="p-fluid p-grid">
     <div class="p-field p-col-12 p-md-4">
         <span class="p-float-label">
-            <input type="number" id="waterRating" pInputText [(ngModel)]="waterRating"> 
+            <input type="number" id="water_rating" pInputText [(ngModel)]="water_rating"> 
             <label for="inputtext">Nota da água</label>
         </span>
     </div>
@@ -49,7 +49,7 @@
 <div class="p-fluid p-grid">
     <div class="p-field p-col-12 p-md-4">
         <span class="p-float-label">
-            <input type="number" id="diamondRating" pInputText [(ngModel)]="diamondRating"> 
+            <input type="number" id="diamond_rating" pInputText [(ngModel)]="diamond_rating"> 
             <label for="inputtext">Nota de diamantes</label>
         </span>
     </div>
@@ -58,7 +58,7 @@
 <div class="p-fluid p-grid">
     <div class="p-field p-col-12 p-md-4">
         <span class="p-float-label">
-            <input type="number" id="goldRating" pInputText [(ngModel)]="goldRating"> 
+            <input type="number" id="gold_rating" pInputText [(ngModel)]="gold_rating"> 
             <label for="inputtext">Nota de ouro</label>
         </span>
     </div>
@@ -67,7 +67,7 @@
 <div class="p-fluid p-grid">
     <div class="p-field p-col-12 p-md-4">
         <span class="p-float-label">
-            <input type="number" id="silverRating" pInputText [(ngModel)]="silverRating"> 
+            <input type="number" id="silver_rating" pInputText [(ngModel)]="silver_rating"> 
             <label for="inputtext">Nota de prata</label>
         </span>
     </div>
@@ -76,12 +76,12 @@
 <div class="p-fluid p-grid">
     <div class="p-field p-col-12 p-md-4">
         <span class="p-float-label">
-            <input type="number" id="cooperRating" pInputText [(ngModel)]="cooperRating"> 
+            <input type="number" id="world.cooper_rating" pInputText [(ngModel)]="cooper_rating"> 
             <label for="inputtext">Nota da bronze</label>
         </span>
     </div>
 </div>
 <br><br>
-<button pButton pRipple type="button" label="Cancelar" class="p-button-danger"></button>
+<button pButton pRipple type="submit" label="Cancelar" class="p-button-danger"></button>
 
-<button pButton pRipple type="button" label="Salvar" class="p-button-success"></button>
+<button pButton pRipple (click)="salvar()" type="submit" label="Salvar" class="p-button-success"></button>

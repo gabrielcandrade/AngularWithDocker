@@ -1,11 +1,10 @@
 export interface World {
-    id?:string;
     name?:string;
     population?:number;
-    globalRating?:number;
-    waterRating?:number;
-    diamondRating?:number;
-    goldRating?:number;
-    silverRating?:number;
-    cooperRating?:number;
+    global_rating?:number;
+    water_rating?:number;
+    diamond_rating?:number;
+    gold_rating?:number;
+    silver_rating?:number;
+    cooper_rating?:number;
 }

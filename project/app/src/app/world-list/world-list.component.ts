@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { WorldService } from './worldservice';
-import { World } from './world';
 
 
 @Component({
@@ -10,12 +9,17 @@ import { World } from './world';
 })
 export class WorldListComponent implements OnInit {
   
-  worlds: World[];
+  worlds: any = [];
 
   constructor(private worldService: WorldService) { }
 
   ngOnInit(): void {
-    this.worldService.getWorlds().then(data => this.worlds = data);
+    // this.worldService.getWorlds().then(data => this.worlds = data);
+    this.worldService.getWorlds().subscribe(
+      response => {
+        this.worlds = response
+      }
+    )
   }
 
 }

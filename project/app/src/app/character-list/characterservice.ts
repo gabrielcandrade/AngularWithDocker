@@ -1,17 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { Observable } from 'rxjs';
 import { Character } from './characters';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class CharacterService {
 
-    constructor(private http: HttpClient) { }
+  url = "http://localhost:8005/api/character"
 
-    getCharacters() {
-        return this.http.get<any>('assets/characters/characters.json')
-        .toPromise()
-        .then(res => <Character[]>res.data)
-        .then(data => { return data; });
-    }
+  constructor(private http: HttpClient) { }
+
+  public salvar(character:Character):Observable<Character>{
+    return this.http.post<Character>(this.url, character)
+  }
+
+  getCharacters():Observable<any[]>{
+    return this.http.get<any[]>(this.url);
+  }
 }

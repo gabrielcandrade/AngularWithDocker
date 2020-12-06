@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SkillService } from '../skill-list/skillservice';
 
 @Component({
   selector: 'app-skill-new',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillNewComponent implements OnInit {
 
-  constructor() { }
+  public skill
+  constructor(private skillService:SkillService) { }
 
   ngOnInit() {
+  }
+
+  public salvar(){
+    this.skillService.salvar(this.skill).subscribe(
+      response => {
+        alert("Salvo com sucesso!")
+      },
+      error => {
+        alert(this.skill)
+      }
+    )
   }
 
 }

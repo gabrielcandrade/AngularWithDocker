@@ -1,17 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Character } from '../character-list/characters';
 
-import { Skill } from './skills';
-
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class SkillService {
 
-    constructor(private http: HttpClient) { }
+  url = "http://localhost:8005/api/skill"
 
-    getSkills() {
-        return this.http.get<any>('assets/skills/skills.json')
-        .toPromise()
-        .then(res => <Skill[]>res.data)
-        .then(data => { return data; });
-    }
+  constructor(private http: HttpClient) { }
+
+  public salvar(character:Character):Observable<Character>{
+    return this.http.post<Character>(this.url, character)
+  }
+
+  getSkill():Observable<any[]>{
+    return this.http.get<any[]>(this.url);
+  }
+
 }

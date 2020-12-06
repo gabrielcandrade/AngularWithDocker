@@ -1,17 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { World } from './world'
 
-import { World } from './world';
-
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class WorldService {
 
-    constructor(private http: HttpClient) { }
+  url = "http://localhost:8005/api/world/"
 
-    getWorlds() {
-        return this.http.get<any>('assets/worlds/worlds.json')
-        .toPromise()
-        .then(res => <World[]>res.data)
-        .then(data => { return data; });
-    }
+  constructor(private http: HttpClient) { }
+
+  public salvar(world:World):Observable<World>{
+    return this.http.post<World>(this.url, world)
+  }
+
+  getWorlds():Observable<any[]>{
+    return this.http.get<any[]>(this.url);
+  }
 }

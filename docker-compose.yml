@@ -1,11 +1,36 @@
 version: '3.5'
-services: # Here we define our service(s)
-    angular-service: # The name of the service
-      container_name: angularcontainer  # Container name
-      build: ./project # Location of our Dockerfile
-      volumes: # Volume binding
-        - './project:/usr/src/app' 
-      ports: 
-        - '4200:4200' # Port mapping
-      command: > #For first build, add: ng new app &&
-        bash -c "cd app/ && ng serve --host 0.0.0.0 --port 4200"
+services: 
+  angular-service: 
+    container_name: angularcontainer  
+    build: ./project 
+    volumes: 
+      - './project:/usr/src/app' 
+    ports: 
+      - '4200:4200' 
+    command: > 
+      bash -c "cd app/ && ng serve --host 0.0.0.0 --port 4200"
+  postgres:
+    image: postgres
+    hostname: postgres
+    ports: 
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=papw-rpg
+      - POSTGRES_USER=krythor
+      - POSTGRES_PASSWORD=root
+  api-service:
+    container_name: rpg-api  
+    build: ./api 
+    volumes: 
+      - './api:/usr/src/api' 
+    ports: 
+      - '8005:8005'
+    depends_on:
+      - postgres
+    command: 
+      sh -c "/wait && cd /usr/src/api && python manage.py migrate && python manage.py runserver 0.0.0.0:8005"
+    environment:
+      - WAIT_HOSTS=postgres:5432
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=30
+      - WAIT_HOST_CONNECT_TIMEOUT=30
